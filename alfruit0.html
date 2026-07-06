@@ -4,28 +4,100 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,
 		initial-scale=1.0">
+		
 		<title></title>
 	</head>
 		<body>
-			<select>
-				<form action="" method="POST">
+			<h3>実厳選表作成ツール</h3>
+				<div>誰を厳選しますか</div>
+					<form action="" method="POST">
+						<input type="text" name="chara" placeholder="キャラ名を入力">
+					</form>		
+				<form action="" method="POST" id="ichiran" style="display: none;">
+					<select>
+						<img class="特L" src="" alt="特L">
+							<option value="">実を選択してください</option>
+							<optgroup label="加撃">
+							<option>同族・加撃</option> 
+							<option>同族・加命撃</option>
+							<option>同族・加撃速</option>
+							<option>撃種・加撃</option>
+							<option>撃種・加命撃</option>
+							<option>撃種・加撃速</option>
+							<option>戦型・加撃</option>
+							<option>戦型・加命撃</option>
+							<option>戦型・加撃速</option>
+							<option>孤高・加撃</option>
+							<optgroup label="サポート">
+							<option>熱き友撃</option>
+							<option>将命</option>
+							<option>兵命</option>
+							<option>速必殺</option>
+							<option>怪我減り</option>
+							<option>毒我慢</option>
+							<option>一撃失神</option>
+							<option>ちび癒し</option>
+							<option>ハート強化</option>
+							<optgroup label="加命加速">
+							<option>同族・加命</option>
+							<option>同族・加速命</option>
+							<option>同族・加速</option>
+							<option>撃種・加命</option>
+							<option>撃種・加速命</option>
+							<option>撃種・加速</option>
+							<option>戦型・加命</option>
+							<option>戦型・加速命</option>
+							<option>戦型・加速</option>
+							<optgroup label="稼ぎ系">
+							<option>荒稼ぎ</option>
+							<option>スコア稼ぎ</option>
+							<option>Sランク</option>
+							<option>学び</option>
+					</select>
 					<label>
-						<input type="checkbox" name="used" value="大英雄">大英雄使用済み
-					</label>
-					<label>
-						<input type="checkbox" name="used" value="英雄">英雄の書使用済み
+						<input type="checkbox" name="level" value="EL">特級EL
 					</label>
 				</form>
-				<div id="ichiran"></div>
-				
-				<script>
-					fetch("ichiran.html")
-						.then((response)=>response.text())
-						.then((data)=>document.querySelector("#ichiran").innerHTML=data);
-					fetch("ichiran.html")
-						.then((response)=>response.text())
-						.then((data)=>document.querySelector("#ichiran").innerHTML=data);
-				</script>		
-						
+			
+			<div>状態を選択</div>
+			<form action="" method="POST">
+				<label>
+					<input type="checkbox" name="add2" value="英雄" id="sho">英雄の書使用
+				</label>
+				<label>
+					<input type="checkbox" name="add" value="大英雄" id="sho2">大英雄使用
+				</label>
+				<label>
+
+					<input type="checkbox" name="mix" value="運極合成" id="max">運極合成済
+				</label>
+				<label>
+					<input type="checkbox" name="default1" value="ガチャ星4星5" id="def1">ガチャ☆4☆5のキャラです
+				</label>
+				<label>
+					<input type="checkbox" name="default2" value="獣神化" id="def2">獣神化済み
+				</label>
+			</form>
+			<script>
+				function judge()={
+					if()
+				}
+				const wkwk=document.getElementById("ichiran");
+				const situ1=document.getElementById("sho");
+				const situ2=document.getElementById("sho2");
+				const situ3=document.getElementById("max");
+				const situ4=document.getElementById("def1");
+				const situ5=document.getElementById("def2");
+
+				situ1.addEventListener(change)
+				situ2.addEventListener
+				situ3.addEventListener
+				situ4.addEventListener
+				situ5.addEventListener
+
+				function scend(){
+						document.getElementById("ichiran").style.display="block"
+					};
+			</script>								
 		</body>
 </html>
