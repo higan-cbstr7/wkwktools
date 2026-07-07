@@ -79,25 +79,68 @@
 				</label>
 			</form>
 			<script>
-				function judge()={
-					if()
-				}
 				const wkwk=document.getElementById("ichiran");
 				const situ1=document.getElementById("sho");
 				const situ2=document.getElementById("sho2");
 				const situ3=document.getElementById("max");
 				const situ4=document.getElementById("def1");
 				const situ5=document.getElementById("def2");
+				
+				function judge1(){
+					if(situ1.checked){
+						wkwk.style.display="block";
+					}else{
+						wkwk.style.display="none";
+					}
+				}
 
-				situ1.addEventListener(change)
-				situ2.addEventListener
-				situ3.addEventListener
-				situ4.addEventListener
-				situ5.addEventListener
+			/*	function judge2(){
+					if(situ2.checked){
+						wkwk.style.display="block";
+					}else{
+						wkwk.style.display="none";
+					}
+				}
 
-				function scend(){
-						document.getElementById("ichiran").style.display="block"
-					};
+				function judge3(){
+					if(situ3.checked){
+						wkwk.style.display="block";
+					}else{
+						wkwk.style.display="none";
+					}
+				}
+
+				function judge4(){
+					if(situ4.checked){
+						wkwk.style.display="block";
+					}else{
+						wkwk.style.display="none";
+					}
+				}
+
+				function judge5(){
+					if(situ5.checked){
+						wkwk.style.display="block";
+					}else{
+						wkwk.style.display="none";
+					}
+				}*/
+
+				/*situ1.addEventListener("change", function(){
+					if(situ1.checked){
+						wkwk.style.display="block";
+					}else{
+						wkwk.style.display="none";
+					}
+				});
+				*/
+				situ1.addEventListener("change", judge1, false);
+				/*situ2.addEventListener("change", judge2(), false);
+				situ3.addEventListener("change", judge3(), false);
+				situ4.addEventListener("change", judge4(), false);
+				situ5.addEventListener("change", judge5(), false);
+				*/
+
 			</script>								
 		</body>
 </html>
