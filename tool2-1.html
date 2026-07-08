@@ -73,44 +73,40 @@
 			<script>
 
 				const nform=document.getElementById("ichiran1");
-				function charaname(){
-					event.preventDefault(event);
-					const ntable=document.getElementById("result1");
-					const nbody=document.getElementById("result0");
-					const cname=document.getElementById("chara1");
-					const ntr=document.createElement("tr");
-					const ntd=document.createElement("td");
-					ntd.textContent=cname.value;
-					ntr.appendChild(ntd);
-					nbody.appendChild(ntr);
-					nform.reset();
-				}
 
 				function kindofmi(){
 					event.preventDefault(event);
 					const mtable=document.getElementById("result1");
 					const mbody=document.getElementById("result0");
+					const cname=document.getElementById("chara1");
 					const wkwks1=document.getElementById("jitu1").value;
 					const plus1=document.getElementById("el");
+					
+					const ntr=document.createElement("tr");
+					const ntd=document.createElement("td");
+
 					const mtr=document.createElement("tr");
 					const mtd=document.createElement("td");
 					const ptd=document.createElement("td");
+
+					ntd.textContent=cname.value;
+
 					mtd.textContent=wkwks1;
 					if(plus1.checked){
 						ptd.textContent="特EL";
 					}
 					else{;}
+					
+					ntr.appendChild(ntd);
+					mtr.appendChild(mtd);
 					mtr.appendChild(ptd);
+					mbody.appendChild(ntr);
 					mbody.appendChild(mtr);
 					
+					nform.reset();
 				}
-
-				//nform.addEventListener("submit", charaname, false);//
 				nform.addEventListener("submit", kindofmi, false);
-				
-
 			</script>
-
 
 
 

@@ -58,7 +58,7 @@
 				</label>
 				<input type="submit" value="作成" id="make">
 			</form>
-			
+			<!--フォーム内容出力先 !-->
 			<table id="result1">
 				<tbody id="result0">
 					<tr>
@@ -75,22 +75,32 @@
 				const nform=document.getElementById("ichiran1");
 
 				function kindofmi(){
+					//フォーム送信時にページ遷移しないようにする//
 					event.preventDefault(event);
+					//フォーム内容出力先の表（table要素及びtbody要素）の内容を取得//
 					const mtable=document.getElementById("result1");
 					const mbody=document.getElementById("result0");
 					const cname=document.getElementById("chara1");
 					const wkwks1=document.getElementById("jitu1").value;
 					const plus1=document.getElementById("el");
 					
+					//table要素の中の1行分を示すtr要素を作ってntrという名前を付ける//
 					const ntr=document.createElement("tr");
+					//table要素の中の1行分にあるデータを示すtd要素を作ってntdという名前を付ける//
 					const ntd=document.createElement("td");
-
+					//以下も同じ//
 					const mtr=document.createElement("tr");
 					const mtd=document.createElement("td");
 					const ptd=document.createElement("td");
-
+					/*先程作った空のtd要素であるntdに、
+					cnameの値（今回はchara1というidが付いたテキストボックスの入力値）
+					を代入している。
+					.textContentはピリオド前のオブジェクトや変数のテキストを文字列として取得する
+					「オブジェクト.textContent=文字列」	でオブジェクトの内容を代入した文字列に上書きする*/
+					//.valueはピリオド前のオブジェクトや変数の値を取得する。inputなどの入力フォームの値取得によく使われる//
+					//今回はcname.valueにしないとcnameが持っているinputタグそのもの（[object HTMLInputElement]）が出力されることになる//
 					ntd.textContent=cname.value;
-
+					
 					mtd.textContent=wkwks1;
 					if(plus1.checked){
 						ptd.textContent="特EL";
@@ -103,6 +113,7 @@
 					mbody.appendChild(ntr);
 					mbody.appendChild(mtr);
 					
+					//フォーム送信後に入力値をリセットする//
 					nform.reset();
 				}
 				nform.addEventListener("submit", kindofmi, false);
