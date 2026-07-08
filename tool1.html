@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,
+		initial-scale=1.0">
+		
+		<title>実厳選表作成ツール</title>
+	</head>
+		<body>
+			<form action="" method="POST" id="page1">
+				<label>誰を厳選しますか
+					<input type="text" name="chara" placeholder="キャラ名を入力" required>
+				</label>
+				<label>
+					<input type="checkbox" name="add2" value="英雄" id="sho">英雄の書使用
+				</label>
+				<label>
+					<input type="checkbox" name="add" value="大英雄" id="sho2">大英雄使用
+				</label>
+				<label>
+					<input type="checkbox" name="mix" value="運極合成" id="max">運極合成済
+				</label>
+				<label>
+					<input type="checkbox" name="default1" value="ガチャ星4星5" id="def1">星4以上非獣神化ガチャ限
+				</label>
+				<label>
+					<input type="checkbox" name="default2" value="獣神化" id="def2">獣神化済み
+				</label>
+					<input type="submit" value="次へ" id="next1">
+			</form>	
+			<button onclick="location.href='tool2-1.html'" id="butun1" style="display: none;">次へ</button>
+			<button onclick="location.href='tool2-2.html'" id="butun2" style="display: none;">次へ</button>
+			<button onclick="location.href='tool2-3.html'" id="butun3" style="display: none;">次へ</button>
+			<button onclick="location.href='tool2-4.html'" id="butun4" style="display: none;">次へ</button>
+		
+			<script>
+				const situ1=document.getElementById("sho");
+				const situ2=document.getElementById("sho2");
+				const situ3=document.getElementById("max");
+				const situ4=document.getElementById("def1");
+				const situ5=document.getElementById("def2");
+				const botan=document.getElementById("next1");
+				const botan1=document.getElementById("butun1");
+				const botan2=document.getElementById("butun2");
+				const botan3=document.getElementById("butun3");
+				const botan4=document.getElementById("butun4");
+				
+				function curik(){
+					if(situ1.checked && !situ2.checked && !situ3.checked && !situ4.checked && !situ5.checked){
+						botan1.style.display="block";
+					}
+					else if(situ1.checked && situ2.checked && !situ3.checked && !situ4.checked && !situ5.checked){
+						botan2.style.display="block";
+					}
+					else if(!situ1.checked && situ2.checked && !situ3.checked && !situ4.checked && !situ5.checked){
+						botan1.style.display="block";
+					}
+					else if(!situ1.checked && !situ2.checked && situ3.checked && !situ4.checked && !situ5.checked){
+						botan1.style.display="block";
+					}
+					else if(situ1.checked && !situ2.checked && situ3.checked && !situ4.checked && !situ5.checked){
+						botan2.style.display="block";
+					}
+					else if(!situ1.checked && situ2.checked && situ3.checked && !situ4.checked && !situ5.checked){
+						botan2.style.display="block";
+					}
+					else if(situ1.checked && situ2.checked && situ3.checked && !situ4.checked && !situ5.checked){
+						botan3.style.display="block";
+					}
+					else if(!situ1.checked && !situ2.checked && !situ3.checked && situ4.checked && !situ5.checked){
+						botan1.style.display="block";
+					}
+					else if(situ1.checked && !situ2.checked && !situ3.checked && situ4.checked && !situ5.checked){
+						botan2.style.display="block";
+					}
+					else if(!situ1.checked && situ2.checked && !situ3.checked && situ4.checked && !situ5.checked){
+						botan2.style.display="block";
+					}
+					else if(situ1.checked && situ2.checked && !situ3.checked && situ4.checked && !situ5.checked){
+						botan3.style.display="block";
+					}		
+					else if(!situ1.checked && !situ2.checked && !situ3.checked && !situ4.checked && situ5.checked){
+						botan2.style.display="block";
+					}
+					else if(situ1.checked && !situ2.checked && !situ3.checked && !situ4.checked && situ5.checked){
+						botan3.style.display="block";
+					}
+					else if(!situ1.checked && situ2.checked && !situ3.checked && !situ4.checked && situ5.checked){
+						botan3.style.display="block";
+					}
+					else if(situ1.checked && situ2.checked && !situ3.checked && !situ4.checked && situ5.checked){
+						botan4.style.display="block";
+					}
+					else{
+						window.alert("縛りプレイ頑張ってください");
+					}
+				}
+				
+				
+				botan.addEventListener("click", curik, false);
+
+			</script>
+
+		</body>
+</html>			
