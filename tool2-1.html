@@ -5,10 +5,13 @@
 		<meta name="viewport" content="width=device-width,
 		initial-scale=1.0">
 		
-		<title></title>
+		<title>実厳選表作成ツール</title>
 	</head>
 		<body>		
 			<form action="" method="POST" id="ichiran1">
+				<label>キャラ名を入力
+					<input type="text" name="name" required>  
+				</label>
 				<label>ワクワクの実	
 					<select>
 						<option value="">実を選択してください</option>
@@ -53,6 +56,7 @@
 				<label>
 					<input type="checkbox" name="level" value="EL">特級EL
 				</label>
+				<input type="submit" value="作成" id="make">
 			</form>
 		</body>
 </html>
