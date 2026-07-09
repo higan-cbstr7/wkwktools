@@ -77,7 +77,11 @@
 				function kindofmi(){
 					//フォーム送信時にページ遷移しないようにする//
 					event.preventDefault(event);
-					//フォーム内容出力先の表（table要素及びtbody要素）の内容を取得//
+					//フォーム内容出力先の表（table要素及びtbody要素）の内容を取得。//
+					// コンボボックスについては入力値（選択したもの）を取得したいのでgetElementById().value;とする//
+					//getelementByIdだけだとHTML要素を取得してしまい、コンボボックスの場合[object HTMLInputElement]という要素そのものが取得されてしまう//
+					//チェックボックスに関しては今回出力としては文字列（特EL）を指定しているのでvalueを付けなくても問題ない//
+					//コンボボックスについて、ここでvalue指定してもいいし、textContentを使って追加td要素に代入する時に代入物の後にvalueをつけてもよい//
 					const mtable=document.getElementById("result1");
 					const mbody=document.getElementById("result0");
 					const cname=document.getElementById("chara1");
@@ -86,18 +90,21 @@
 					
 					//table要素の中の1行分を示すtr要素を作ってntrという名前を付ける//
 					const ntr=document.createElement("tr");
-					//table要素の中の1行分にあるデータを示すtd要素を作ってntdという名前を付ける//
+					//table要素の中の1行分にあるデータを示すtd要素を作ってntdという名前を付ける。//
+					//作ったhtml要素は「追加先のhtml要素（trなど親要素となる要素が多い）.appendChild(追加したい要素);」で追加する。追加時は親要素の一番最後の位置に追加される//
 					const ntd=document.createElement("td");
 					//以下も同じ//
 					const mtr=document.createElement("tr");
 					const mtd=document.createElement("td");
 					const ptd=document.createElement("td");
+
 					/*先程作った空のtd要素であるntdに、
 					cnameの値（今回はchara1というidが付いたテキストボックスの入力値）
 					を代入している。
-					.textContentはピリオド前のオブジェクトや変数のテキストを文字列として取得する
-					「オブジェクト.textContent=文字列」	でオブジェクトの内容を代入した文字列に上書きする*/
-					//.valueはピリオド前のオブジェクトや変数の値を取得する。inputなどの入力フォームの値取得によく使われる//
+					.textContentは、オブジェクトや変数の内容を取得する機能及びオブジェクトや変数の内容を上書きする機能がある。
+					「オブジェクト.textContent」で、オブジェクトの内容を取得する。
+					「オブジェクト.textContent=文字列;」	でオブジェクトの内容を、=で代入した文字列へと上書きする*/
+					//.valueもピリオド前のオブジェクトや変数の値を取得するが、取得対象は一般にinputなどの入力フォームに入力された値である。入力フォームに入力された値はtextContentでは取得できない。//
 					//今回はcname.valueにしないとcnameが持っているinputタグそのもの（[object HTMLInputElement]）が出力されることになる//
 					ntd.textContent=cname.value;
 					
