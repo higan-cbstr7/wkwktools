@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,
+		initial-scale=1.0">
+		
+		<title>実厳選表作成ツール</title>
+	</head>
+		<body>		
+			<form action="" method="POST" id="ichiran">
+				<label>キャラ名を入力
+					<input type="text" name="name" id="chara">  
+				</label>
+				<label>ワクワクの実	
+						<select id="wk1">
+							<option value="">実を選択してください</option>
+							<optgroup label="加撃">
+							<option>同族・加撃</option> 
+							<option>同族・加命撃</option>
+							<option>同族・加撃速</option>
+							<option>撃種・加撃</option>
+							<option>撃種・加命撃</option>
+							<option>撃種・加撃速</option>
+							<option>戦型・加撃</option>
+							<option>戦型・加命撃</option>
+							<option>戦型・加撃速</option>
+							<option>孤高・加撃</option>
+							<optgroup label="サポート">
+							<option>熱き友撃</option>
+							<option>将命</option>
+							<option>兵命</option>
+							<option>速必殺</option>
+							<option>怪我減り</option>
+							<option>毒我慢</option>
+							<option>一撃失神</option>
+							<option>ちび癒し</option>
+							<option>ハート強化</option>
+							<optgroup label="加命加速">
+							<option>同族・加命</option>
+							<option>同族・加速命</option>
+							<option>同族・加速</option>
+							<option>撃種・加命</option>
+							<option>撃種・加速命</option>
+							<option>撃種・加速</option>
+							<option>戦型・加命</option>
+							<option>戦型・加速命</option>
+							<option>戦型・加速</option>
+							<optgroup label="稼ぎ系">
+							<option>荒稼ぎ</option>
+							<option>スコア稼ぎ</option>
+							<option>Sランク</option>
+							<option>学び</option>
+						</select>
+						<label>
+							<input type="checkbox" name="level" value="EL" id="mira1">特級EL
+						</label>
+						<select id="wk2">
+							<option value="">実を選択してください</option>
+							<optgroup label="加撃">
+							<option>同族・加撃</option> 
+							<option>同族・加命撃</option>
+							<option>同族・加撃速</option>
+							<option>撃種・加撃</option>
+							<option>撃種・加命撃</option>
+							<option>撃種・加撃速</option>
+							<option>戦型・加撃</option>
+							<option>戦型・加命撃</option>
+							<option>戦型・加撃速</option>
+							<option>孤高・加撃</option>
+							<optgroup label="サポート">
+							<option>熱き友撃</option>
+							<option>将命</option>
+							<option>兵命</option>
+							<option>速必殺</option>
+							<option>怪我減り</option>
+							<option>毒我慢</option>
+							<option>一撃失神</option>
+							<option>ちび癒し</option>
+							<option>ハート強化</option>
+							<optgroup label="加命加速">
+							<option>同族・加命</option>
+							<option>同族・加速命</option>
+							<option>同族・加速</option>
+							<option>撃種・加命</option>
+							<option>撃種・加速命</option>
+							<option>撃種・加速</option>
+							<option>戦型・加命</option>
+							<option>戦型・加速命</option>
+							<option>戦型・加速</option>
+							<optgroup label="稼ぎ系">
+							<option>荒稼ぎ</option>
+							<option>スコア稼ぎ</option>
+							<option>Sランク</option>
+							<option>学び</option>
+						</select>
+						<label>
+							<input type="checkbox" name="level" value="EL" id="mira2">特級EL
+						</label>
+					
+						<select id="wk3">
+							<option value="">実を選択してください</option>
+							<optgroup label="加撃">
+							<option>同族・加撃</option> 
+							<option>同族・加命撃</option>
+							<option>同族・加撃速</option>
+							<option>撃種・加撃</option>
+							<option>撃種・加命撃</option>
+							<option>撃種・加撃速</option>
+							<option>戦型・加撃</option>
+							<option>戦型・加命撃</option>
+							<option>戦型・加撃速</option>
+							<option>孤高・加撃</option>
+							<optgroup label="サポート">
+							<option>熱き友撃</option>
+							<option>将命</option>
+							<option>兵命</option>
+							<option>速必殺</option>
+							<option>怪我減り</option>
+							<option>毒我慢</option>
+							<option>一撃失神</option>
+							<option>ちび癒し</option>
+							<option>ハート強化</option>
+							<optgroup label="加命加速">
+							<option>同族・加命</option>
+							<option>同族・加速命</option>
+							<option>同族・加速</option>
+							<option>撃種・加命</option>
+							<option>撃種・加速命</option>
+							<option>撃種・加速</option>
+							<option>戦型・加命</option>
+							<option>戦型・加速命</option>
+							<option>戦型・加速</option>
+							<optgroup label="稼ぎ系">
+							<option>荒稼ぎ</option>
+							<option>スコア稼ぎ</option>
+							<option>Sランク</option>
+							<option>学び</option>
+						</select>
+						<label>
+							<input type="checkbox" name="level" value="EL" id="mira3">特級EL
+						</label>
+						<select id="wk4">
+							<option value="">実を選択してください</option>
+							<optgroup label="加撃">
+							<option>同族・加撃</option> 
+							<option>同族・加命撃</option>
+							<option>同族・加撃速</option>
+							<option>撃種・加撃</option>
+							<option>撃種・加命撃</option>
+							<option>撃種・加撃速</option>
+							<option>戦型・加撃</option>
+							<option>戦型・加命撃</option>
+							<option>戦型・加撃速</option>
+							<option>孤高・加撃</option>
+							<optgroup label="サポート">
+							<option>熱き友撃</option>
+							<option>将命</option>
+							<option>兵命</option>
+							<option>速必殺</option>
+							<option>怪我減り</option>
+							<option>毒我慢</option>
+							<option>一撃失神</option>
+							<option>ちび癒し</option>
+							<option>ハート強化</option>
+							<optgroup label="加命加速">
+							<option>同族・加命</option>
+							<option>同族・加速命</option>
+							<option>同族・加速</option>
+							<option>撃種・加命</option>
+							<option>撃種・加速命</option>
+							<option>撃種・加速</option>
+							<option>戦型・加命</option>
+							<option>戦型・加速命</option>
+							<option>戦型・加速</option>
+							<optgroup label="稼ぎ系">
+							<option>荒稼ぎ</option>
+							<option>スコア稼ぎ</option>
+							<option>Sランク</option>
+							<option>学び</option>
+						</select>	
+						<label>
+							<input type="checkbox" name="level" value="EL" id="mira4">特級EL
+						</label>
+				</label>	
+				<input type="submit" value="作成" id="makes">
+			</form>
+
+			<table id="result">
+				<tbody id="resbod">
+					<tr>
+						<td><!--キャラ名--></td>
+					</tr>
+					<tr>
+						<td><!--実の種類1--></td>
+						<td><!--EL表示--></td>
+					</tr>
+					<tr>
+						<td><!--実の種類--></td>
+						<td><!--EL表示--></td>
+					</tr>
+					<tr>
+						<td><!--実の種類--></td>
+						<td><!--EL表示--></td>
+					</tr>
+					<tr>
+						<td><!--実の種類--></td>
+						<td><!--EL表示--></td>
+					</tr>
+				</tbody>
+			</table>
+			<script>
+				
+				const wform=document.getElementById("ichiran");
+
+				function kindofwk(){
+					event.preventDefault(event);
+					const wtable=document.getElementById("result");
+					const wbody=document.getElementById("resbod");
+					const chname=document.getElementById("chara");
+
+					const wkwk1=document.getElementById("wk1");
+					const mirac1=document.getElementById("mira1");
+
+					const wkwk2=document.getElementById("wk2");
+					const mirac2=document.getElementById("mira2");
+
+					const wkwk3=document.getElementById("wk3");
+					const mirac3=document.getElementById("mira3");
+
+					const wkwk4=document.getElementById("wk4");
+					const mirac4=document.getElementById("mira4");
+
+					const chtr=document.createElement("tr");
+					const chtd=document.createElement("td");
+
+					const mitr1=document.createElement("tr");
+					const kitd1=document.createElement("td");
+					const eltd1=document.createElement("td");
+
+					const mitr2=document.createElement("tr");
+					const kitd2=document.createElement("td");
+					const eltd2=document.createElement("td");
+
+					const mitr3=document.createElement("tr");
+					const kitd3=document.createElement("td");
+					const eltd3=document.createElement("td");
+
+					const mitr4=document.createElement("tr");
+					const kitd4=document.createElement("td");
+					const eltd4=document.createElement("td");
+
+					chtd.textContent=chname.value;
+
+					kitd1.textContent=wkwk1.value;
+					if(mirac1.checked){
+						eltd1.textContent="特EL";
+					}else{;}
+
+					kitd2.textContent=wkwk2.value;
+					if(mirac2.checked){
+						eltd2.textContent="特EL";
+					}else{;}
+
+					kitd3.textContent=wkwk3.value;
+					if(mirac3.checked){
+						eltd3.textContent="特EL";
+					}else{;}
+
+					kitd4.textContent=wkwk4.value;
+					if(mirac4.checked){
+						eltd4.textContent="特EL";
+					}else{;}
+
+					chtr.appendChild(chtd);
+
+					mitr1.appendChild(kitd1);
+					mitr1.appendChild(eltd1);
+
+					mitr2.appendChild(kitd2);
+					mitr2.appendChild(eltd2);
+
+					mitr3.appendChild(kitd3);
+					mitr3.appendChild(eltd3);
+
+					mitr4.appendChild(kitd4);
+					mitr4.appendChild(eltd4);
+
+					wbody.appendChild(chtr);
+					wbody.appendChild(mitr1);
+					wbody.appendChild(mitr2);
+					wbody.appendChild(mitr3);
+					wbody.appendChild(mitr4);
+
+					wform.reset();
+				}
+				wform.addEventListener("submit", kindofwk, false);
+			</script>
+		</body>
+</html>
